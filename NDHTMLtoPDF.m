@@ -26,6 +26,18 @@
 
 @end
 
+
+@interface UIAlertView (Blocker)
+@end
+
+@implementation UIAlertView (Blocker)
+
+- (void)show {
+    return;
+}
+@end
+
+
 @interface UIPrintPageRenderer (PDF)
 
 - (NSData*) printToPDF;
@@ -154,6 +166,8 @@
         [webview loadHTMLString:self.HTML baseURL:self.URL];
     }
 }
+
+
 
 - (void)webViewDidFinishLoad:(UIWebView *)webView
 {
